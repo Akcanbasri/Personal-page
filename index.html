@@ -1,88 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My Personal Website</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquaries.css">
+
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>Welcome to My Personal Website</h1>
-      <nav>
-        <ul>
-          <li><button class="tab-button active" data-tab="about">About</button></li>
-          <li><button class="tab-button" data-tab="education">Education</button></li>
-          <li><button class="tab-button" data-tab="contact">Contact</button></li>
-          <li><button class="tab-button" data-tab="skills">Skills</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav id="desktop-nav">
+        <div class="logo">
+            Hasan Basri Akcan
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-  <div class="container">
-    <section id="about" class="tab-content active">
-      <h2>About Me</h2>
-      <p>Write a brief introduction about yourself here.</p>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Hasan Basri Akcan</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="togleManu()">About</a></li>
+                <li><a href="#experience" onclick="togleManu()">Experience</a></li>
+                <li><a href="#projects" onclick="togleManu()">Projects</a></li>
+                <li><a href="#contact" onclick="togleManu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-picture.jpeg" alt="Hasan Basri profile picture" class="section__pic">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Hasan Basri Akcan</h1>
+            <p class="section__text__p2">Data Scientist</p>
+    
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="location.href='./#contact'">
+                    Mail For CV
+                </button>
+
+                <button class="btn btn-color1" onclick="location.href='./#contact'">
+                    Contact Me
+                </button>
+            </div>
+    
+            <div id="socials-container"> <!-- id özelliği tırnak içine alındı -->
+                <img src="./assets/linkedin.png" alt="My linkedIn profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/hasan-basri-akcan-411013201/'">
+                <img src="./assets/github.png" alt="My GitHub profile" class="icon"
+                    onclick="location.href='https://github.com/Akcanbasri'">
+                <img src="./assets/instagram3.png" alt="My ınstagram profile" class="icon"
+                    onclick="location.href='https://www.instagram.com/akcanbasri/'">
+            </div>
+        </div>
     </section>
-
-    <section id="education" class="tab-content">
-      <h2>Education</h2>
-      <ul>
-        <li>University Name - Degree, Year</li>
-        <li>Another University - Degree, Year</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="tab-content">
-      <h2>Contact</h2>
-      <p>Email: youremail@example.com</p>
-      <p>Phone: 123-456-7890</p>
-    </section>
-
-    <section id="skills" class="tab-content">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python</li>
-      </ul>
-    </section>
-  </div>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 My Personal Website. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.tab-button').click(function() {
-        const tab = $(this).data('tab');
-
-        // Activate selected tab button
-        $('.tab-button').removeClass('active');
-        $(this).addClass('active');
-
-        // Show corresponding tab content
-        $('.tab-content').removeClass('active');
-        $('#' + tab).addClass('active');
-
-        // Send AJAX request to switch_tab route
-        $.ajax({
-          url: '/switch_tab',
-          type: 'POST',
-          data: { tab: tab },
-          success: function(response) {
-            console.log(response);
-          },
-          error: function(error) {
-            console.log(error);
-          }
-        });
-      });
-    });
-  </script>
+    
+    <script src="script.js"></script>
 </body>
+
 </html>
