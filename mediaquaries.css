@@ -1,131 +1,154 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    
-   /* About kısmı için eklediğim CSS kodları */
-   
-   /* Resim ve metin kısımlarını alt alta dizmek için */
-   .section__flex__container {
-     flex-direction: column;
-   }
+}
 
-   /* Resmi küçültmek ve ortalamak için */
-   .section__pic__container {
-     width: auto;
-     height: auto;
-     margin-bottom: 2rem;
-   }
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
 
-   /* Resmi küçültmek için */
-   .about-pic {
-     width: 100%;
-     height: auto;
-   }
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
 
-   /* Detay kısımlarını alt alta dizmek için */
-   .about-containers {
-     flex-direction: column;
-     gap: 1rem;
-     align-items: center; /* Bu satırı ekledim */
-   }
+  /* About kısmı için eklediğim CSS kodları */
 
-   /* Detay kısımlarını küçültmek için */
-   .details-container {
-     width: auto;
-     height: auto;
-   }
+  /* Resim ve metin kısımlarını alt alta dizmek için */
+  .section__flex__container {
+    flex-direction: column;
+  }
 
-   /* Metin kısmını yaslamak ve sığdırmak için */
-   .text-container {
-     text-align: justify;
-     max-width: 80%; /* Bu satırı ekledim */
-   }
+  /* Resmi küçültmek ve ortalamak için */
+  .section__pic__container {
+    width: auto;
+    height: auto;
+    margin-bottom: 2rem;
+  }
 
-   /* Ok simgesini gizlemek için */
-   .arrow {
-     display: none;
-   }
+  /* Resmi küçültmek için */
+  .about-pic {
+    width: 100%;
+    height: auto;
+  }
 
-   /* Başlık kısmını küçültmek için */
-   .title {
-     font-size: 1.5rem;
-   }
+  /* Detay kısımlarını alt alta dizmek için */
+  .about-containers {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
 
-   /* Deneyim kısmını küçültmek için */
-   .experience-sub-title {
-     font-size: 1rem;
-   }
+  /* Detay kısımlarını küçültmek için */
+  .details-container {
+    width: auto;
+    height: auto;
+  }
 
-   /* Logo kısmını küçültmek için */
-   .logo {
-     font-size: 1.25rem;
-   }
+  /* Metin kısmını yaslamak ve sığdırmak için */
+  .text-container {
+    text-align: justify;
+    max-width: 80%;
+  }
 
-   /* Eğitim, deneyim ve paragraf kısımlarını ortalamak için */
-   .about-details-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center; /* Bu satırı ekledim */
-     justify-items: center;
-     margin: 0;
-   }
+  /* Ok simgesini gizlemek için */
+  .arrow {
+    display: none;
+  }
 
+  /* Başlık kısmını küçültmek için */
+  .title {
+    font-size: 1.5rem;
+  }
+
+  /* Deneyim kısmını küçültmek için */
+  .experience-sub-title {
+    font-size: 1rem;
+  }
+
+  /* Logo kısmını küçültmek için */
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  /* Eğitim, deneyim ve paragraf kısımlarını ortalamak için */
+  .about-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+  }
+
+  /* .contact-info-upper-container için eklediğim CSS kodları */
+
+  .contact-info-upper-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  /* .nav-links için eklediğim CSS kodları */
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }
